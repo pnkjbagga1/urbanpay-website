@@ -128,7 +128,7 @@ section{padding:88px 0;scroll-margin-top:80px}
 
 /* Feature list */
 .feat{display:flex;gap:16px;align-items:flex-start}
-.feat .ic{flex:0 0 48px;height:48px;border-radius:14px;background:var(--ink);color:var(--lime);display:grid;place-items:center;font-size:22px}
+.feat .ic{flex:0 0 auto;width:48px;height:48px;line-height:1;border-radius:14px;background:var(--ink);color:var(--lime);display:grid;place-items:center;font-size:22px}
 .dark .feat .ic{background:var(--lime);color:var(--ink)}
 .feat h4{font-size:18px;margin-bottom:4px}
 .feat p{color:var(--muted);font-size:15px}
