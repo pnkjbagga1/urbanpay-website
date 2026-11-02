@@ -926,7 +926,7 @@ document.getElementById('yr').textContent=new Date().getFullYear();
  try{sessionStorage.setItem('upintro','1')}catch(_){}
  document.body.style.overflow='hidden';
  const end=()=>{it.classList.add('done');document.body.style.overflow='';setTimeout(()=>it.remove(),400)};
- it.addEventListener('click',end);const t=setTimeout(end,3500);it.addEventListener('animationend',e=>{if(e.animationName==='inOut'){clearTimeout(t);document.body.style.overflow='';it.remove()}});})();
+ it.addEventListener('click',end);const t=setTimeout(end,5600);it.addEventListener('animationend',e=>{if(e.animationName==='inOut'){clearTimeout(t);document.body.style.overflow='';it.remove()}});})();
 if(STATIC){
   initPage();
   const qp=new URLSearchParams(location.search).get('interest'); if(qp) prefill(app.querySelector('.form'),qp);
