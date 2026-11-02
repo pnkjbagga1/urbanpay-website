@@ -771,6 +771,7 @@ const SEO = {
  contact:['/contact/','Contact UrbanPay: Free Quote & Statement Review','Call +1 604 360 7088 or request a free quote and processing statement review for terminals, POS, online payments, loans and grants.'],
 };
 const STATIC = document.body.dataset.page || '';
+const ROOT = document.querySelector('meta[name="site-root"]')?.content || '/';
 document.documentElement.classList.add('js');
 
 /* ===================== ROUTER ===================== */
@@ -901,7 +902,7 @@ function initPage(){
 const modal=document.getElementById('modal'), mform=document.getElementById('modalForm');
 function openModal(ctx,cheque){
   if(cheque){const cf=document.getElementById('chequeForm'); if(cf){cf.scrollIntoView({behavior:'smooth',block:'center'});return}
-    if(STATIC){location.href=SEO.cheques[0]+'#order';return} location.hash='#cheques';setTimeout(()=>document.getElementById('chequeForm')?.scrollIntoView({behavior:'smooth'}),80);return}
+    if(STATIC){location.href=ROOT+SEO.cheques[0].slice(1)+'#order';return} location.hash='#cheques';setTimeout(()=>document.getElementById('chequeForm')?.scrollIntoView({behavior:'smooth'}),80);return}
   mform.innerHTML='<button class="x" aria-label="Close">×</button>'+leadForm('mf', ctx?('Get pricing: '+ctx.replace(/^[^:]+: /,'')):'Get your free custom quote').replace(/^<div class="form" id="mf">/,'').replace(/<\/div>$/,'');
   mform.id='modalForm'; delete mform.dataset.wired;
   wireForm(mform); prefill(mform,ctx||'');
@@ -916,7 +917,7 @@ document.addEventListener('click',e=>{
   const c=e.target.closest('[data-cheque]'); if(c){e.preventDefault();openModal('',true);return}
   const sc=e.target.closest('[data-scroll]'); if(sc){e.preventDefault();document.querySelector(sc.getAttribute('href'))?.scrollIntoView({behavior:'smooth'});return}
   const p=e.target.closest('[data-prefill]');
-  if(p){ if(STATIC){e.preventDefault();location.href=SEO.contact[0]+'?interest='+encodeURIComponent(p.dataset.prefill);return}
+  if(p){ if(STATIC){e.preventDefault();location.href=ROOT+SEO.contact[0].slice(1)+'?interest='+encodeURIComponent(p.dataset.prefill);return}
     pendingPrefill=p.dataset.prefill; if(location.hash===p.getAttribute('href')){render()} }
   if(e.target.closest('.burger')) document.getElementById('mobile').classList.toggle('open');
 });
