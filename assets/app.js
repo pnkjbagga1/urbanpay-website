@@ -272,7 +272,7 @@ const PAGES = {};
 PAGES.home = () => `
 <section class="hero"><span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span><div class="wrap hero-grid">
   <div>
-    <div class="eyebrow">Canada's one-stop payments partner</div>
+    <div class="eyebrow">Your trusted payment partner</div>
     <h1>All payment solutions. <em>One place.</em><br><span style="font-size:.55em;color:#dfe6f7;font-weight:700">Built for <span class="rot" id="rot"><span class="on">restaurants</span><span>retail stores</span><span>cafés</span><span>boutiques</span><span>grocers</span><span>growing brands</span></span></span></h1>
     <p class="lead">Terminals, POS, online payments, cheques, AI marketing, websites, business loans and grants — compared across leading brands and delivered by one team that actually picks up the phone.</p>
     <div class="hero-ctas"><button class="btn btn-lime arrow" data-quote="">Get a Free Quote</button><a href="#contact" class="btn btn-ghost" style="color:#fff" data-prefill="Free statement review">Free Statement Review</a></div>
@@ -750,7 +750,7 @@ PAGES.contact = () => pageHero({crumb:'Contact',eyebrow:'Let\'s talk',title:'Get
 
 /* ===================== SEO MAP ===================== */
 const SEO = {
- home:['/','UrbanPay | Payment Processing, POS & Business Funding Canada','Payment terminals, Clover & POS for retail and restaurants, online payments, cheques, loyalty, automation, business loans and grants. Free statement review.'],
+ home:['/','UrbanPay | Your Trusted Payment Partner in Canada','Payment terminals, Clover & POS for retail and restaurants, online payments, cheques, loyalty, automation, business loans and grants. Free statement review.'],
  restaurants:['/restaurant-pos-payments/','Restaurant POS & Payment Processing Canada | UrbanPay','POS and payment bundles for cafés, QSR and full-service restaurants: Clover, TouchBistro, Lightspeed, pay-at-table, QR ordering and financing.'],
  retail:['/retail-pos-payments/','Retail POS & Payment Processing Canada | UrbanPay','POS and payment bundles for boutiques, grocery and multi-store retailers: Clover, Lightspeed, Odoo, inventory, eCommerce sync and inventory loans.'],
  terminals:['/payment-terminals/','Payment Terminals Canada: Clover, PAX, Ingenico | UrbanPay','Compare Clover, Poynt, Ingenico, Dejavoo and PAX terminals. Accept tap, chip, Interac, Apple Pay and Google Pay with local setup and support.'],
